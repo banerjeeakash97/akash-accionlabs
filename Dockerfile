@@ -1,5 +1,3 @@
-### 1. Write a Dockerfile to run nginx version 1.19 in a container. Choose a base image, considering security best practices, and aim for the image to pass a container image security test
-```bash
 FROM nginx:1.19-alpine
 RUN addgroup -S nginx && adduser -S nginx -G nginx
 RUN chown -R nginx:nginx /var/cache/nginx /var/run /var/log/nginx
@@ -7,4 +5,3 @@ RUN rm -rf /var/cache/apk/*
 USER nginx
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-```

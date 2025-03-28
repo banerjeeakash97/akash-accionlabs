@@ -1,6 +1,3 @@
-### 2. Write a Kubernetes StatefulSet to deploy the nginx container from the previous question. Utilize persistent volume claims and define resource limits for optimal performance.
-
-```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -43,6 +40,5 @@ spec:
         accessModes: ["ReadWriteOnce"]
         resources:
           requests:
-            storage: 5Gi 
-```
+            storage: 5Gi
 
